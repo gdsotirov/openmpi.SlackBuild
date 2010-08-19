@@ -1,0 +1,27 @@
+openmpi: OpenMPI (A High Performance Message Passing Library)
+openmpi:
+openmpi:   The Open MPI Project is an open source MPI-2 implementation that
+openmpi: is developed and maintained by a consortium of academic, research,
+openmpi: and industry partners.  Open MPI is therefore able to combine the
+openmpi: expertise, technologies, and resources from all across the High
+openmpi: Performance Computing community in order to build the best MPI
+openmpi: library available.  Open MPI offers advantages for system and
+openmpi: software vendors, application developers and computer science
+openmpi: researchers.
+openmpi:   Features implemented or in short-term development for Open MPI
+openmpi: include:
+openmpi:   * Full MPI-2 standards conformance
+openmpi:   * Thread safety and concurrency
+openmpi:   * Dynamic process spawning
+openmpi:   * Network and process fault tolerance
+openmpi:   * Support network heterogeneity
+openmpi:   * Single library supports all networks
+openmpi:   * Run-time instrumentation
+openmpi:   * Many job schedulers supported 
+openmpi:   * Many OS's supported (32 and 64 bit)
+openmpi:   * Component-based design, documented APIs
+openmpi: 
+openmpi:   Open MPI is developed in a true open source fashion by a
+openmpi: consortium of research, academic, and industry partners.
+openmpi:
+openmpi: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
