@@ -9,7 +9,7 @@
 NAME=openmpi
 VERSION=1.4.2
 ARCH=${ARCH:-i486}
-BUILD=1
+BUILD=${BUILD:-1}
 
 TMP=${TMP:-/tmp}
 CWD=${CWD:-`pwd`}
