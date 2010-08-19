@@ -1,0 +1,6 @@
+cxxlibs >= 6.0.10 | gcc-g++ >= 4.3.3
+gcc >= 4.3.3
+gcc-g++ >= 4.3.3
+gcc-gfortran >= 4.3.3
+glibc-solibs >= 2.9
+zlib >= 1.2.3
