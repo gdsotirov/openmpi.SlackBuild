@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.3 2011/10/16 10:11:28 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.4 2011/11/16 20:41:42 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -79,7 +79,6 @@ CXXFLAGS=$SLKCFLAGS \
             --enable-cxx-exceptions \
             --enable-smp-locks \
             --enable-mpi-threads \
-            --enable-progress-threads \
             --enable-visibility || exit 4
 
 # Build & install
