@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.5 2012/05/13 11:54:53 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.6 2012/06/23 12:18:00 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=openmpi
-VERSION=1.4.5
+VERSION=1.6
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -65,6 +65,7 @@ CXXFLAGS=$SLKCFLAGS \
             --libdir=/usr/lib${LIBDIRSUFFIX} \
             --mandir=/usr/man \
             --docdir=/usr/doc/$NAME-$VERSION \
+            --enable-ipv6 \
             --enable-shared=yes \
             --enable-static=no \
             --enable-mpi-f77 \
@@ -78,7 +79,6 @@ CXXFLAGS=$SLKCFLAGS \
             --enable-binaries \
             --enable-cxx-exceptions \
             --enable-smp-locks \
-            --enable-mpi-threads \
             --enable-visibility || exit 4
 
 # Build & install
