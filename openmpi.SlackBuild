@@ -19,7 +19,7 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.8 2012/10/03 07:15:50 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.9 2012/10/03 07:21:59 gsotirov Exp $
 #
 
 . ../../slack-package.conf
@@ -82,7 +82,7 @@ CXXFLAGS=$SLKCFLAGS \
             --enable-visibility || exit 4
 
 # Build & install
-make -j4 || exit 5 
+make V=1 -j4 || exit 5 
 make DESTDIR=$PKG install || exit 6
 
 # Prepare
