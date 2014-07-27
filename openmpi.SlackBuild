@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.13 2014/03/29 10:26:12 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.14 2014/07/27 16:35:51 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=openmpi
-VERSION=1.8rc1
+VERSION=1.8.1
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -56,7 +56,7 @@ cd $SRC
 fix_source
 
 # Configure
-CFLAGS=$SLKCFLAGS \
+CFLAGS="$SLKCFLAGS -std=gnu99" \
 CXXFLAGS=$SLKCFLAGS \
 ./configure --build=$ARCH-slackware-linux \
             --host=$ARCH-slackware-linux \
@@ -65,11 +65,14 @@ CXXFLAGS=$SLKCFLAGS \
             --libdir=/usr/lib${LIBDIRSUFFIX} \
             --mandir=/usr/man \
             --docdir=/usr/doc/$NAME-$VERSION \
+            --disable-mca-dso \
+            --disable-sysv-shmem \
+            --without-cs-fs \
+            --with-mpi-param_check=always \
+            --with-threads=posix \
             --enable-ipv6 \
             --enable-shared=yes \
             --enable-static=no \
-            --enable-mpi-f77 \
-            --enable-mpi-f90 \
             --enable-mpi-profile \
             --enable-mpi-cxx \
             --enable-mpi-cxx-seek \
@@ -79,8 +82,10 @@ CXXFLAGS=$SLKCFLAGS \
             --enable-binaries \
             --enable-cxx-exceptions \
             --enable-smp-locks \
-            --enable-visibility || exit 4
-
+            --enable-visibility \
+            --enable-mca-no-build=paffinity,installdirs-windows,timer-windows,shmem-sysv || exit 4
+#           --enable-contrib-no-build=vt,libompitrace \
+	
 # Build & install
 make V=1 -j4 || exit 5 
 make DESTDIR=$PKG install || exit 6
