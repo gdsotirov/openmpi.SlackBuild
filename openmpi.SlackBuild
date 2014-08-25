@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.14 2014/07/27 16:35:51 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.15 2014/08/25 19:03:46 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=openmpi
-VERSION=1.8.1
+VERSION=1.8.2
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
@@ -56,7 +56,7 @@ cd $SRC
 fix_source
 
 # Configure
-CFLAGS="$SLKCFLAGS -std=gnu99" \
+CFLAGS="$SLKCFLAGS -O2" \
 CXXFLAGS=$SLKCFLAGS \
 ./configure --build=$ARCH-slackware-linux \
             --host=$ARCH-slackware-linux \
