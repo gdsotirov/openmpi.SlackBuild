@@ -19,13 +19,13 @@
 #
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
-# $Id: openmpi.SlackBuild,v 1.20 2015/07/22 16:30:38 gsotirov Exp $
+# $Id: openmpi.SlackBuild,v 1.21 2015/08/12 16:05:38 gsotirov Exp $
 #
 
 . ../../slack-package.conf
 
 NAME=openmpi
-VERSION=1.8.7
+VERSION=1.8.8
 ARCH=${ARCH:-i486}
 BUILD=${BUILD:-1}
 
