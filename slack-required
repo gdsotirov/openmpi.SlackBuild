@@ -1,6 +1,9 @@
-eudev >= 3.1.5
-gcc >= 5.3.0
-gcc-g++ >= 5.3.0
-gcc-gfortran >= 5.3.0
-glibc-solibs >= 2.23
-libpciaccess >= 0.13.4
+aaa_glibc-solibs >= 2.33
+eudev >= 3.2.11
+gcc >= 11.2.0
+gcc-g++ >= 11.2.0
+gcc-gfortran >= 11.2.0
+libevent >= 2.1.12
+libnl3 >= 3.5.0
+libpciaccess >= 0.16
+zlib >= 1.2.12
