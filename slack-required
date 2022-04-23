@@ -6,4 +6,4 @@ gcc-gfortran >= 11.2.0
 libevent >= 2.1.12
 libnl3 >= 3.5.0
 libpciaccess >= 0.16
-zlib >= 1.2.12
+zlib >= 1.2.11
