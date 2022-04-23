@@ -23,7 +23,7 @@
 . ../../slack-package.conf
 
 NAME=openmpi
-VERSION=2.1.6
+VERSION=4.1.3
 ARCH=${ARCH:-i586}
 BUILD=${BUILD:-1}
 
